@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/principal.css">
+    <link rel="stylesheet" href="css/bienvenida.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/slide-and-swipe-menu.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+<body>
+    <div id="contenedor_carga">
+        <img src="img/logo.png" id="logoInicio">
+        <div id="preloader_2">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+  
+    <div id="test2">
+        <img src="img/swipe.png" width="350px" height="70px"
+            style="position: fixed; opacity: 0; z-index: 1; margin-left: 15%;">
+    </div>
+    <nav class="nav" id="menu">
+        <div>
+            <img src="img/paisaje.jpg" width="100%" style="z-index: -1; position: absolute;">
+            <img src="img/fondo.png" class="menuImagen">
+            <h3> </h3>
+        </div>
+
+
+        <ol id="lista2">
+            <li> <a href="actualizarDatos.html" class="submenu" data-ajax="false"> &#128100; Mis datos</a> </li>
+            <li> <a href="#" class="submenu"> &#128276; Mensajes </a> </li>
+            <li> <a href="#" class="submenu"> &#128101; Amigos </a> </li>
+            <li> <a href="#" class="submenu"> &#128190; Guardados </a> </li>
+            <li> <a href="#" class="submenu"> &#127911; Música </a> </li>
+            <li> <a href="#" class="submenu"> &#127942; Retos Semanales </a> </li>
+            <li> <a href="#" class="submenu"> &#127939; Comunidad </a> </li>
+            <li> <a href="#" class="submenu"> &#129361; Mi plan alimenticio </a> </li>
+            <li> <a href="#" class="submenu"> &#128202; Mi progreso </a> </li>
+            <li> <a href="#" class="submenu"> &#128295; Configuración </a> </li>
+
+        </ol>
+        Desliza para cerrar
+        <img src="img/swipe.png" width="30%">
+    </nav>
+
+    <div data-role="page" id="inicio" data-theme="b">
+
+        <div data-role="header">
+
+            <img src="img/menu.png" class="menuLogo" onclick="menu()">
+            <img src="img/logo.png" class="menuLogoVuamos">
+            <p class="header2">
+                Inicio
+            </p>
+
+
+        </div>
+        <div data-role="main" class="ui-content">
+
+            <div class="ejercicios"></div>
+            Inicio
+
+        </div>
+        <div data-role="footer" class="ui-tabs">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="javascript:recargar('#inicio')" data-ajax="false" data-icon="home"
+                           > Inicio </a></li>
+                    <li><a href="javascript:recargar('#rutina')" data-ajax="false" data-icon="star">Mi rutina</a></li>
+                    <li><a href="javascript:recargar('#ejercicios')" data-ajax="false" data-icon="grid">Ejercicios</a>
+                    </li>
+                    <li><a href="javascript:recargar('#articulos')" data-ajax="false" data-icon="bars"> Articulos</a>
+                    </li>
+                    <li><a href="javascript:recargar('#videos')" data-ajax="false" data-icon="video">Videos</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div data-role="page" id="rutina" data-theme="b">
+        <div data-role="header">
+
+            <img src="img/menu.png" class="menuLogo" onclick="menu()">
+            <img src="img/logo.png" class="menuLogoVuamos">
+            <p class="header2">
+                Mi rutina
+            </p>
+
+
+        </div>
+        <div data-role="main" class="ui-content">
+
+            Mi rutina
+        </div>
+        <div data-role="footer" class="ui-tabs">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="javascript:recargar('#inicio')" data-ajax="false" data-icon="home"
+                           > Inicio </a></li>
+                    <li><a href="javascript:recargar('#rutina')" data-ajax="false" data-icon="star">Mi rutina</a></li>
+                    <li><a href="javascript:recargar('#ejercicios')" data-ajax="false" data-icon="grid">Ejercicios</a>
+                    </li>
+                    <li><a href="javascript:recargar('#articulos')" data-ajax="false" data-icon="bars"> Articulos</a>
+                    </li>
+                    <li><a href="javascript:recargar('#videos')" data-ajax="false" data-icon="video">Videos</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+
+    </div>
+
+
+    <div data-role="page" id="ejercicios" data-theme="b">
+
+        <div data-role="header">
+
+            <img src="img/menu.png" class="menuLogo" onclick="menu()">
+            <img src="img/logo.png" class="menuLogoVuamos">
+            <p class="header2">
+                Ejercicios
+            </p>
+        </div>
+
+        <div data-role="main" class="ui-content">
+             <a href="javascript:mp('ejercicios.html#mprin')" data-ajax="false"> <img src="img/muy principiante.png" width="100%"></a>
+            <div class="swiper-container">
+                <div class="swiper-wrapper" id="muyPrincipiantes">
+                    
+                </div>
+                
+                <br><br>
+                <div class="swiper-pagination"></div>
+            </div>
+           <a href="javascript:mp('ejercicios.html#prin')"> <img src="img/principiante.png" width="100%"> </a> 
+            <div class="swiper-container">
+                <div class="swiper-wrapper" id="principiantes">
+                    
+                </div>
+                
+                <br><br>
+                <div class="swiper-pagination"></div>
+            </div>
+            <a href="javascript:mp('ejercicios.html#inter')">   <img src="img/intermedios.png" width="100%"> </a> 
+            <div class="swiper-container">
+                <div class="swiper-wrapper" id="intermedios">
+                    
+                </div>
+                
+                <br><br>
+                <div class="swiper-pagination"></div>
+            </div>
+            <a href="javascript:mp('ejercicios.html#avan')"> <img src="img/avanzados.png" width="100%"> </a>    
+            <div class="swiper-container">
+                <div class="swiper-wrapper" id="avanzados">
+                    
+                </div>
+                
+                <br><br>
+                <div class="swiper-pagination"></div>
+            </div>
+            <br><br>
+           
+
+        </div>
+        <div data-role="footer" class="ui-tabs">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="javascript:recargar('#inicio')" data-ajax="false" data-icon="home"
+                           > Inicio </a></li>
+                    <li><a href="javascript:recargar('#rutina')" data-ajax="false" data-icon="star">Mi rutina</a></li>
+                    <li><a href="javascript:recargar('#ejercicios')" data-ajax="false" data-icon="grid">Ejercicios</a>
+                    </li>
+                    <li><a href="javascript:recargar('#articulos')" data-ajax="false" data-icon="bars"> Articulos</a>
+                    </li>
+                    <li><a href="javascript:recargar('#videos')" data-ajax="false" data-icon="video">Videos</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div data-role="page" id="articulos" data-theme="b">
+        <div data-role="header">
+
+            <img src="img/menu.png" class="menuLogo" onclick="menu()">
+            <img src="img/logo.png" class="menuLogoVuamos">
+            <p class="header2">
+                Articulos
+            </p>
+
+
+        </div>
+        <div data-role="main" class="ui-content">
+
+            Articulos
+        </div>
+        <div data-role="footer" class="ui-tabs">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="javascript:recargar('#inicio')" data-ajax="false" data-icon="home"
+                           > Inicio </a></li>
+                    <li><a href="javascript:recargar('#rutina')" data-ajax="false" data-icon="star">Mi rutina</a></li>
+                    <li><a href="javascript:recargar('#ejercicios')" data-ajax="false" data-icon="grid">Ejercicios</a>
+                    </li>
+                    <li><a href="javascript:recargar('#articulos')" data-ajax="false" data-icon="bars"> Articulos</a>
+                    </li>
+                    <li><a href="javascript:recargar('#videos')" data-ajax="false" data-icon="video">Videos</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div data-role="page" id="videos" data-theme="b">
+        <div data-role="header">
+
+            <img src="img/menu.png" class="menuLogo" onclick="menu()">
+            <img src="img/logo.png" class="menuLogoVuamos">
+            <p class="header2">
+                Videos
+            </p>
+
+
+        </div>
+        <div data-role="main" class="ui-content">
+
+            Videos
+        </div>
+        <div data-role="footer" class="ui-tabs">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="javascript:recargar('#inicio')" data-ajax="false" data-icon="home"
+                           > Inicio </a></li>
+                    <li><a href="javascript:recargar('#rutina')" data-ajax="false" data-icon="star">Mi rutina</a></li>
+                    <li><a href="javascript:recargar('#ejercicios')" data-ajax="false" data-icon="grid">Ejercicios</a>
+                    </li>
+                    <li><a href="javascript:recargar('#articulos')" data-ajax="false" data-icon="bars"> Articulos</a>
+                    </li>
+                    <li><a href="javascript:recargar('#videos')" data-ajax="false" data-icon="video">Videos</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="http://labs.rampinteractive.co.uk/touchSwipe/jquery.touchSwipe.min.js"></script>
+    <script src="js/principal.js"></script>
+    <script src="js/desliza.js"></script>
+    <script src="js/mostrarEjercicios.js"></script>
+    <script src="js/jquery.slideandswipe.js"></script>
+    <script src="js/jquery.slideandswipe.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+           
+    });     
+        window.onload = function () {
+            setTimeout('ocultar()', 100);
+            
+        }
+
+        function ocultar() {
+            var contenedor = document.getElementById('contenedor_carga');
+
+
+            contenedor.style.visibility = 'hidden';
+            contenedor.style.opacity = '0';
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 2,
+                spaceBetween: 0,
+                observer: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+        }
+    </script>
+
+</body>
+
+
+<!-- touchSwipe library -->
+
+</html>

@@ -1,0 +1,36 @@
+.menuImagen{
+    width: 30%;
+    margin-left: 35%;
+    border-radius: 100%;
+    z-index: -1;
+    
+}
+
+h3{
+    text-align: center;
+}
+
+#muestaEjerciciosMP{
+    visibility: hidden;
+}
+
+#muestraEjerciciosP{
+    visibility: hidden;
+}
+
+#muestraEjerciciosInter{
+    visibility: hidden;
+}
+
+#muestraEjerciciosAvan{
+    visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
